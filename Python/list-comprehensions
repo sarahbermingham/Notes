@@ -1,0 +1,28 @@
+List Comprehensions
+
+	- General form: [ expression for-clause condition]
+		- The square brackets indicate we are building a list.
+
+		- The result of the expression of the for-clause is added to the list.
+
+		- The for-clause visits each element in the list.
+
+		- The condition allows us to select for inclusion in newlist expressions over those in oldlist that meet criteria. Unless the condition is met no new element is added and it moves to the next iteration.
+
+	Example:
+		- Add find the odd numbers in a list.
+
+			def find_odds(lst):
+				return [n for n in lst if n % 2 == 1]
+
+			- For each n in the list, if n is odd, add n to the list.
+
+		- Remove vowels from a string.
+
+			def remove_vowels(s):
+					return "".join([c for c in s if c.lower() not in "aeiou"])
+
+		- Square the even numbers and cube the odd numbers.
+
+			def even_squares_odd_cubes(l):
+    			return [n ** 2 if n % 2 else n**3 for n in l]
