@@ -1,0 +1,44 @@
+Exception Handling
+	- When a program encounters an error, it completely stops.
+	- If you pass a file name if a file that doesn't exist, the program will stop. 
+    - Python allows programmers to handle these situations with try-except construct.
+
+	- Try block: instructions that may fail due to error. 
+    - When an error occurs here the rest of this block is ignored.
+
+	- Except block: instructions to be carried out when try fails.
+
+
+	- Else block: executed if the try block executes normally. It is placed after the except blocks.
+
+	- Finally block: place code that will always be executed.
+
+
+	Example:
+
+		def open_file(filename):
+			try:
+				f = open(filename, "r")
+
+				for line in f:
+					words = line.strip().split()
+
+				print("{:s} has {:d} words.".format(filename, len(words)))
+
+				f.close()
+
+			except FileNotFoundError:
+				print("The file {:s} does not exist.".format(filename))
+
+			else:
+				print("Exited try block normally")
+
+
+Common Errors:
+
+	ValueError
+	FileNotFoundError
+    ZeroDivisionError
+    TypeError
+    IndexError
+    KeyError
