@@ -1,4 +1,4 @@
-Exception Handling
+# Exception Handling
 	- When a program encounters an error, it completely stops.
 	- If you pass a file name if a file that doesn't exist, the program will stop. 
     - Python allows programmers to handle these situations with try-except construct.
